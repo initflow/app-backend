@@ -15,4 +15,11 @@ class ApiRequest
             RequestOptions::JSON => $body
         ]);
     }
+
+    public function get($url)
+    {
+        $httpClient = new GuzzleClient();
+
+        return $httpClient->get($url);
+    }
 }

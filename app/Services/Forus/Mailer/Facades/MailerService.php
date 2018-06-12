@@ -2,6 +2,7 @@
 
 namespace App\Services\Forus\Mailer\Facades;
 
+
 use Illuminate\Support\Facades\Facade;
 
 class MailerService extends Facade

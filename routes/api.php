@@ -27,6 +27,10 @@ Route::group(['namespace' => 'Api'], function() {
             });
         });
     });
+
+    Route::resource('/messages', 'MessageController')->only([
+        'index', 'store'
+    ]);
 });
 
 Route::group(['namespace' => 'Api', 'middleware' => ['api.auth']], function() {

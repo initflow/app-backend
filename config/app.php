@@ -191,6 +191,7 @@ return [
         App\Services\Forus\Mailer\MailerServiceProvider::class,
         App\Services\Forus\Identity\IdentityServiceProvider::class,
         App\Services\Forus\Record\RecordServiceProvider::class,
+        App\Services\Forus\Message\MessageServiceProvider::class,
 
     ],
 
@@ -247,6 +248,7 @@ return [
         'MailerService' => \App\Services\Mailer\Facades\MailerService::class,
         'IdentityService' => \App\Services\Forus\Identity\Facades\IdentityService::class,
         'RecordService' => \App\Services\Forus\Record\Facades\RecordService::class,
+        'MessageService' => \App\Services\Forus\Message\Facades\MessageService::class,
 
     ],
 
