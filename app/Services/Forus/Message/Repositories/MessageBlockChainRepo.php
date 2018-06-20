@@ -27,7 +27,7 @@ class MessageBlockChainRepo implements IMessageRepo
         }
 
         try {
-            return $this->apiRequest->get($this->urlBlockChain . '/messages');
+            return json_decode($this->apiRequest->get($this->urlBlockChain . '/messages')->getBody() . '');
         } catch (\Exception $exception) {
             return false;
         }

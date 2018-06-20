@@ -5,6 +5,7 @@ namespace App\Services\Forus\Message;
 use App\Services\Forus\Message\Repositories\Interfaces\IMessageRepoBlockChain;
 use App\Services\Forus\Message\Repositories\Interfaces\IMessageRepoDb;
 use App\Services\Forus\Message\Repositories\Interfaces\IMessageRepoIpfs;
+use App\Services\Forus\Message\Repositories\MessageBlockChainRepo;
 use App\Services\Forus\Message\Repositories\MessageIpfsRepo;
 use App\Services\Forus\Message\Repositories\MessageDbRepo;
 use Illuminate\Support\ServiceProvider;
@@ -30,8 +31,8 @@ class MessageServiceProvider extends ServiceProvider
             return new MessageIpfsRepo(env('SERVICE_MESSAGES_IPFS_URL'));
         });
 
-        $this->app->bind(IMessageRepoIpfs::class, function() {
-            return new MessageIpfsRepo(env('SERVICE_MESSAGES_BLOCK_CHAIN_URL'));
+        $this->app->bind(IMessageRepoBlockChain::class, function() {
+            return new MessageBlockChainRepo(env('SERVICE_MESSAGES_BLOCK_CHAIN_URL'));
         });
 
 

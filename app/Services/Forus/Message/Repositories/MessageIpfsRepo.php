@@ -27,7 +27,7 @@ class MessageIpfsRepo implements IMessageRepo
         }
 
         try {
-            return $this->apiRequest->get($this->urlIpfs . '/messages');
+            return json_decode($this->apiRequest->get($this->urlIpfs . '/messages')->getBody() . '');
         } catch (\Exception $exception) {
             return false;
         }

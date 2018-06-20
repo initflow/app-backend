@@ -16,7 +16,7 @@ class MessageController extends Controller
 
         $this->messageDb = app()->make('forus.services.message-db');
         $this->messageIpfs = app()->make('forus.services.message-ipfs');
-        $this->messageBlockChain = app()->make('forus.services.message-ipfs');
+        $this->messageBlockChain = app()->make('forus.services.message-block-chain');
     }
 
     /**
