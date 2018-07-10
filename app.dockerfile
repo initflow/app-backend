@@ -12,8 +12,8 @@ FROM php:7.2.6-apache-stretch
 
 WORKDIR /var/www
 
-RUN apt-get update 
-RUN apt-get install mc nano -y
+RUN apt-get update
+RUN apt-get install mc nano git -y
 RUN apt-get install -y zlib1g-dev && docker-php-ext-install zip pdo mysqli pdo_mysql
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
