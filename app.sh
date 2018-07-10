@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-
-cd docker
-
 FUNCTION=
 if [ ! -z $1 ]; then
     FUNCTION="$1"
